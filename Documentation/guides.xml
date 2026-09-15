@@ -6,6 +6,10 @@
     <extension class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"
                project-home="https://feedivo.de/typo3"
                project-contact="https://feedivo.de/kontakt"
+               project-repository="https://github.com/Feedivo/typo3-feedivo"
+               project-issues="https://github.com/Feedivo/typo3-feedivo/issues"
+               edit-on-github="Feedivo/typo3-feedivo"
+               edit-on-github-branch="main"
                interlink-shortcode="feedivo/typo3-feedivo"/>
     <project title="Feedivo for TYPO3" copyright="Feedivo"/>
 </guides>

@@ -22,7 +22,8 @@
     ],
     "support": {
         "docs": "https://feedivo.de/hilfe/benutzerhandbuch/typo3-extension",
-        "issues": "https://feedivo.de/kontakt"
+        "issues": "https://github.com/Feedivo/typo3-feedivo/issues",
+        "source": "https://github.com/Feedivo/typo3-feedivo"
     },
     "require": {
         "php": "^8.1",
