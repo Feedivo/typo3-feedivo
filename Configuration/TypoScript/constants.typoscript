@@ -1,0 +1,2 @@
+# Feedivo: no constants. The Feedivo URL lives in the extension configuration,
+# the connection in the backend module.

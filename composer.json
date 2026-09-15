@@ -1,0 +1,52 @@
+{
+    "name": "feedivo/typo3-feedivo",
+    "type": "typo3-cms-extension",
+    "description": "Show your Instagram, Facebook, Threads, Pinterest and YouTube posts from Feedivo as a content element.",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "TYPO3 CMS",
+        "social media",
+        "instagram",
+        "facebook",
+        "youtube",
+        "feed",
+        "feedivo"
+    ],
+    "homepage": "https://feedivo.de/typo3",
+    "authors": [
+        {
+            "name": "Feedivo",
+            "homepage": "https://feedivo.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "docs": "https://feedivo.de/hilfe/benutzerhandbuch/typo3-extension",
+        "issues": "https://feedivo.de/kontakt"
+    },
+    "require": {
+        "php": "^8.1",
+        "typo3/cms-backend": "^12.4 || ^13.4 || ^14.0",
+        "typo3/cms-core": "^12.4 || ^13.4 || ^14.0",
+        "typo3/cms-fluid": "^12.4 || ^13.4 || ^14.0",
+        "typo3/cms-fluid-styled-content": "^12.4 || ^13.4 || ^14.0",
+        "typo3/cms-frontend": "^12.4 || ^13.4 || ^14.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Feedivo\\Typo3\\": "Classes/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "feedivo",
+            "version": "1.0.0",
+            "Package": {
+                "providesPackages": {}
+            }
+        }
+    }
+}

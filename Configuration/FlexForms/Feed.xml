@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <sheetTitle>LLL:EXT:feedivo/Resources/Private/Language/locallang_db.xlf:flexform.sheet</sheetTitle>
+                <type>array</type>
+                <el>
+                    <feed>
+                        <label>LLL:EXT:feedivo/Resources/Private/Language/locallang_db.xlf:flexform.feed</label>
+                        <description>LLL:EXT:feedivo/Resources/Private/Language/locallang_db.xlf:flexform.feed.description</description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLL:EXT:feedivo/Resources/Private/Language/locallang_db.xlf:flexform.feed.none</label>
+                                    <value></value>
+                                </numIndex>
+                            </items>
+                            <itemsProcFunc>Feedivo\Typo3\Backend\FeedItems->items</itemsProcFunc>
+                        </config>
+                    </feed>
+                    <feedIdManual>
+                        <label>LLL:EXT:feedivo/Resources/Private/Language/locallang_db.xlf:flexform.feedIdManual</label>
+                        <description>LLL:EXT:feedivo/Resources/Private/Language/locallang_db.xlf:flexform.feedIdManual.description</description>
+                        <config>
+                            <type>input</type>
+                            <size>40</size>
+                            <max>36</max>
+                            <eval>trim</eval>
+                            <placeholder>00000000-0000-0000-0000-000000000000</placeholder>
+                        </config>
+                    </feedIdManual>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

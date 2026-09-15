@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:feedivo/Resources/Private/Language/locallang.xlf" date="2026-09-14T12:00:00Z" product-name="feedivo">
+        <header/>
+        <body>
+            <trans-unit id="module.title" resname="module.title"><source>Feedivo</source><target>Feedivo</target></trans-unit>
+            <trans-unit id="module.connect" resname="module.connect"><source>Connect with Feedivo</source><target>Mit Feedivo verbinden</target></trans-unit>
+            <trans-unit id="module.intro" resname="module.intro"><source>Create a TYPO3 connection in your Feedivo account (Connections → TYPO3) and enter its connection ID here. Afterwards editors pick a feed in the content element "Feedivo feed".</source><target>Legen Sie in Ihrem Feedivo-Konto eine TYPO3-Verknüpfung an (Verknüpfungen → TYPO3) und tragen Sie hier deren Verknüpfungs-ID ein. Danach wählt die Redaktion im Inhaltselement „Feedivo-Feed“ einen Feed aus.</target></trans-unit>
+            <trans-unit id="module.integrationId" resname="module.integrationId"><source>Connection ID</source><target>Verknüpfungs-ID</target></trans-unit>
+            <trans-unit id="module.integrationIdHint" resname="module.integrationIdHint"><source>Shown on the connection's page in Feedivo. Keep it private: whoever knows it can move the connection to another website.</source><target>Steht in Feedivo auf der Seite der Verknüpfung. Behandeln Sie sie vertraulich: Wer sie kennt, kann die Verknüpfung auf eine andere Website übertragen.</target></trans-unit>
+            <trans-unit id="module.site" resname="module.site"><source>Website</source><target>Website</target></trans-unit>
+            <trans-unit id="module.siteHint" resname="module.siteHint"><source>Feedivo allows the feed on this site's domain. Further domains (for example per language) can be added on the connection's page in Feedivo.</source><target>Feedivo gibt den Feed für die Domain dieser Site frei. Weitere Domains (etwa je Sprache) ergänzen Sie in Feedivo auf der Seite der Verknüpfung.</target></trans-unit>
+            <trans-unit id="module.connectButton" resname="module.connectButton"><source>Connect</source><target>Verbinden</target></trans-unit>
+            <trans-unit id="module.connected" resname="module.connected"><source>Connected with Feedivo</source><target>Mit Feedivo verbunden</target></trans-unit>
+            <trans-unit id="module.connectionName" resname="module.connectionName"><source>Connection</source><target>Verknüpfung</target></trans-unit>
+            <trans-unit id="module.siteUrl" resname="module.siteUrl"><source>Website</source><target>Website</target></trans-unit>
+            <trans-unit id="module.connectedAt" resname="module.connectedAt"><source>Connected on</source><target>Verbunden am</target></trans-unit>
+            <trans-unit id="module.feeds" resname="module.feeds"><source>Available feeds</source><target>Verfügbare Feeds</target></trans-unit>
+            <trans-unit id="module.noFeeds" resname="module.noFeeds"><source>This connection covers no feeds yet. Assign feeds to it in Feedivo.</source><target>Diese Verknüpfung deckt noch keine Feeds ab. Weisen Sie ihr in Feedivo Feeds zu.</target></trans-unit>
+            <trans-unit id="module.howToUse" resname="module.howToUse"><source>Add the content element "Feedivo feed" to a page and pick one of these feeds. Layout, columns and filters are set in Feedivo and apply immediately.</source><target>Fügen Sie einer Seite das Inhaltselement „Feedivo-Feed“ hinzu und wählen Sie einen dieser Feeds. Layout, Spalten und Filter stellen Sie in Feedivo ein; Änderungen wirken sofort.</target></trans-unit>
+            <trans-unit id="module.disconnect" resname="module.disconnect"><source>Disconnect</source><target>Verbindung trennen</target></trans-unit>
+            <trans-unit id="module.disconnectHint" resname="module.disconnectHint"><source>Feeds on your pages stop rendering until you connect again. Nothing is deleted in Feedivo.</source><target>Feeds auf Ihren Seiten werden nicht mehr angezeigt, bis Sie erneut verbinden. In Feedivo wird nichts gelöscht.</target></trans-unit>
+            <trans-unit id="module.footer" resname="module.footer"><source>Feedivo extension %1$s · Feedivo at %2$s ·</source><target>Feedivo-Extension %1$s · Feedivo unter %2$s ·</target></trans-unit>
+            <trans-unit id="message.invalidId" resname="message.invalidId"><source>Please enter the connection ID exactly as shown in Feedivo.</source><target>Bitte geben Sie die Verknüpfungs-ID genau so ein, wie Feedivo sie anzeigt.</target></trans-unit>
+            <trans-unit id="message.unknownId" resname="message.unknownId"><source>Feedivo does not know this connection ID. Check that it belongs to a TYPO3 connection.</source><target>Feedivo kennt diese Verknüpfungs-ID nicht. Prüfen Sie, ob sie zu einer TYPO3-Verknüpfung gehört.</target></trans-unit>
+            <trans-unit id="message.failed" resname="message.failed"><source>Connecting failed: %s</source><target>Verbinden fehlgeschlagen: %s</target></trans-unit>
+            <trans-unit id="message.connected" resname="message.connected"><source>Connected with "%s". Editors can now pick feeds in the content element.</source><target>Mit „%s“ verbunden. Die Redaktion kann jetzt im Inhaltselement Feeds auswählen.</target></trans-unit>
+            <trans-unit id="message.disconnected" resname="message.disconnected"><source>Disconnected from Feedivo.</source><target>Verbindung zu Feedivo getrennt.</target></trans-unit>
+            <trans-unit id="feed.notConnected" resname="feed.notConnected"><source>Not connected – connect the installation under Site Management → Feedivo</source><target>Nicht verbunden – verbinden Sie die Installation unter Site Management → Feedivo</target></trans-unit>
+            <trans-unit id="feed.unavailable" resname="feed.unavailable"><source>Feeds could not be loaded: %s</source><target>Feeds konnten nicht geladen werden: %s</target></trans-unit>
+            <trans-unit id="feed.empty" resname="feed.empty"><source>The connection covers no feeds – assign feeds in Feedivo</source><target>Die Verknüpfung deckt keine Feeds ab – weisen Sie in Feedivo Feeds zu</target></trans-unit>
+            <trans-unit id="preview.feed" resname="preview.feed"><source>Feedivo feed:</source><target>Feedivo-Feed:</target></trans-unit>
+            <trans-unit id="preview.notConnected" resname="preview.notConnected"><source>Not connected with Feedivo – nothing will render. Connect under Site Management → Feedivo.</source><target>Nicht mit Feedivo verbunden – es wird nichts angezeigt. Verbinden Sie unter Site Management → Feedivo.</target></trans-unit>
+            <trans-unit id="preview.noFeed" resname="preview.noFeed"><source>No feed selected – nothing will render.</source><target>Kein Feed ausgewählt – es wird nichts angezeigt.</target></trans-unit>
+        </body>
+    </file>
+</xliff>

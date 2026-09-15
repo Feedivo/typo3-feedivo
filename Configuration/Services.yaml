@@ -1,0 +1,25 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Feedivo\Typo3\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Service/FeedivoClientException.php'
+
+  Feedivo\Typo3\Controller\ConnectionController:
+    tags: ['backend.controller']
+
+  # Instantiated by the Core via GeneralUtility::makeInstance (TCA
+  # itemsProcFunc and TypoScript dataProcessing), so they must be public.
+  Feedivo\Typo3\Backend\FeedItems:
+    public: true
+  Feedivo\Typo3\DataProcessing\FeedivoProcessor:
+    public: true
+
+  Feedivo\Typo3\Backend\FeedPreview:
+    tags:
+      - name: event.listener
+        identifier: 'feedivo/feed-preview'
+        event: TYPO3\CMS\Backend\View\Event\PageContentPreviewRenderingEvent

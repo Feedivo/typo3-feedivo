@@ -1,0 +1,28 @@
+# Content element "Feedivo feed": renders the widget container, the widget
+# script (added once per page by the data processor) fetches the feed from
+# Feedivo in the visitor's browser. Builds on lib.contentElement of
+# fluid_styled_content or of a theme.
+#
+# settings.layout names the Fluid layout around the element. The default is
+# the extension's own layout (frame and header like fluid_styled_content),
+# which works everywhere. A theme with its own content layout sets its name
+# here, e.g. `Content/Default` for the Core theme "Camino", so the element
+# renders inside the theme's wrapper with the theme's header.
+tt_content.feedivo_feed =< lib.contentElement
+tt_content.feedivo_feed {
+    templateName = Feed
+    templateRootPaths.1755 = EXT:feedivo/Resources/Private/Templates/
+    layoutRootPaths.1755 = EXT:feedivo/Resources/Private/Layouts/
+    settings.layout = FeedivoFeed
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        10 {
+            fieldName = pi_flexform
+            as = flexform
+        }
+        20 = Feedivo\Typo3\DataProcessing\FeedivoProcessor
+        20 {
+            as = feedivo
+        }
+    }
+}

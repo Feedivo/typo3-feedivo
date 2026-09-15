@@ -1,0 +1,12 @@
+# New content element wizard entry for TYPO3 v12. From v13 on the wizard reads
+# the same data from TCA (group "special"); both definitions share the group,
+# so the element appears once.
+mod.wizards.newContentElement.wizardItems.special {
+    elements.feedivo_feed {
+        iconIdentifier = feedivo-feed
+        title = LLL:EXT:feedivo/Resources/Private/Language/locallang_db.xlf:ctype.feedivo_feed.title
+        description = LLL:EXT:feedivo/Resources/Private/Language/locallang_db.xlf:ctype.feedivo_feed.description
+        tt_content_defValues.CType = feedivo_feed
+    }
+    show := addToList(feedivo_feed)
+}

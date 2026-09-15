@@ -1,0 +1,91 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Module" />
+<f:section name="Content">
+    <h1><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.title" /></h1>
+
+    <f:if condition="{connection}">
+        <f:then>
+            <div class="card mb-4">
+                <div class="card-header"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.connected" /></div>
+                <div class="card-body">
+                    <dl class="row mb-3">
+                        <dt class="col-sm-3"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.connectionName" /></dt>
+                        <dd class="col-sm-9">{connection.name}</dd>
+                        <dt class="col-sm-3"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.siteUrl" /></dt>
+                        <dd class="col-sm-9">{connection.siteUrl}</dd>
+                        <dt class="col-sm-3"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.connectedAt" /></dt>
+                        <dd class="col-sm-9"><f:format.date format="d.m.Y H:i">{connection.connectedAt}</f:format.date></dd>
+                    </dl>
+
+                    <h2 class="h5"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.feeds" /></h2>
+                    <f:if condition="{feedError}">
+                        <div class="alert alert-warning">{feedError}</div>
+                    </f:if>
+                    <f:if condition="{feeds}">
+                        <f:then>
+                            <ul class="mb-3">
+                                <f:for each="{feeds}" as="feed">
+                                    <li>{feed.name} <code class="text-muted small">{feed.id}</code></li>
+                                </f:for>
+                            </ul>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="!{feedError}">
+                                <p class="text-muted"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.noFeeds" /></p>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                    <p><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.howToUse" /></p>
+
+                    <form method="post" action="{formAction}">
+                        <input type="hidden" name="action" value="disconnect" />
+                        <button type="submit" class="btn btn-default">
+                            <f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.disconnect" />
+                        </button>
+                        <span class="text-muted ms-2"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.disconnectHint" /></span>
+                    </form>
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="card mb-4">
+                <div class="card-header"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.connect" /></div>
+                <div class="card-body">
+                    <p><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.intro" /></p>
+                    <form method="post" action="{formAction}">
+                        <input type="hidden" name="action" value="connect" />
+                        <div class="form-group mb-3">
+                            <label class="form-label" for="feedivo-integration-id">
+                                <f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.integrationId" />
+                            </label>
+                            <input type="text" class="form-control" id="feedivo-integration-id" name="integrationId"
+                                   maxlength="64" required="required" autocomplete="off"
+                                   placeholder="00000000-0000-0000-0000-000000000000" />
+                            <div class="form-text"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.integrationIdHint" /></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label" for="feedivo-site">
+                                <f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.site" />
+                            </label>
+                            <select class="form-select" id="feedivo-site" name="site">
+                                <f:for each="{sites}" as="base" key="identifier">
+                                    <option value="{identifier}">{identifier} – {base}</option>
+                                </f:for>
+                            </select>
+                            <div class="form-text"><f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.siteHint" /></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.connectButton" />
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+
+    <p class="text-muted small">
+        <f:translate key="LLL:EXT:feedivo/Resources/Private/Language/locallang.xlf:module.footer" arguments="{0: version, 1: baseUrl}" />
+        <a href="https://feedivo.de/hilfe/benutzerhandbuch/typo3-extension" target="_blank" rel="noopener">feedivo.de/hilfe</a>
+    </p>
+</f:section>
+</html>

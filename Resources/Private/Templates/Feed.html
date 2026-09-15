@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="{settings.layout}" />
+<f:section name="Main">
+    <f:if condition="{feedivo.embedKey} && {feedivo.feedId}">
+        <f:then>
+            <div class="feedivo-widget" data-feedivo-widget="{feedivo.embedKey}" data-feedivo-feed="{feedivo.feedId}"></div>
+        </f:then>
+        <f:else>
+            <f:comment><!-- No output: the installation is not connected to Feedivo or no feed is selected. --></f:comment>
+        </f:else>
+    </f:if>
+</f:section>
+</html>

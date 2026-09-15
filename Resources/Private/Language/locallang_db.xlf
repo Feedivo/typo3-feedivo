@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:feedivo/Resources/Private/Language/locallang_db.xlf" date="2026-09-14T12:00:00Z" product-name="feedivo">
+        <header/>
+        <body>
+            <trans-unit id="ctype.feedivo_feed.title" resname="ctype.feedivo_feed.title"><source>Feedivo feed</source></trans-unit>
+            <trans-unit id="ctype.feedivo_feed.description" resname="ctype.feedivo_feed.description"><source>Shows an Instagram, Facebook, Threads, Pinterest or YouTube feed from your Feedivo account.</source></trans-unit>
+            <trans-unit id="flexform.label" resname="flexform.label"><source>Feed</source></trans-unit>
+            <trans-unit id="flexform.sheet" resname="flexform.sheet"><source>Feed</source></trans-unit>
+            <trans-unit id="flexform.feed" resname="flexform.feed"><source>Feed</source></trans-unit>
+            <trans-unit id="flexform.feed.description" resname="flexform.feed.description"><source>The feeds of this installation's Feedivo connection. Layout and filters are configured in Feedivo.</source></trans-unit>
+            <trans-unit id="flexform.feed.none" resname="flexform.feed.none"><source>– please select –</source></trans-unit>
+            <trans-unit id="flexform.feedIdManual" resname="flexform.feedIdManual"><source>Feed ID (fallback)</source></trans-unit>
+            <trans-unit id="flexform.feedIdManual.description" resname="flexform.feedIdManual.description"><source>Only needed when the list above cannot be loaded. The ID is shown on the connection's page in Feedivo.</source></trans-unit>
+        </body>
+    </file>
+</xliff>

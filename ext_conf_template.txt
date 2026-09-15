@@ -1,0 +1,6 @@
+# cat=basic; type=string; label=Feedivo URL: Address of the Feedivo service. Leave the default unless you run a self-hosted test instance.
+baseUrl = https://feedivo.de
+# cat=basic; type=string; label=Additional hosts for the Content Security Policy: Comma-separated origins that serve feed media (default: Feedivo's media host). Only relevant when the frontend CSP is enabled.
+additionalHosts = https://cdn.feedivo.de
+# cat=basic; type=boolean; label=Verify TLS certificate: Disable only for a local test instance with a self-signed certificate.
+verifyTls = 1

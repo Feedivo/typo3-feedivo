@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    Own layout instead of the "Default" layout of fluid_styled_content: themes
+    that define lib.contentElement themselves (for example theme_camino) do not
+    ship that layout. Frame and header follow the markup of fluid_styled_content
+    so the element blends in on both.
+</f:comment>
+<div id="c{data.uid}" class="frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout} frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
+    <f:if condition="{data.header} && {data.header_layout} != 100">
+        <header>
+            <f:switch expression="{data.header_layout}">
+                <f:case value="1"><h1 class="ce-headline-left">{data.header}</h1></f:case>
+                <f:case value="3"><h3 class="ce-headline-left">{data.header}</h3></f:case>
+                <f:case value="4"><h4 class="ce-headline-left">{data.header}</h4></f:case>
+                <f:case value="5"><h5 class="ce-headline-left">{data.header}</h5></f:case>
+                <f:defaultCase><h2 class="ce-headline-left">{data.header}</h2></f:defaultCase>
+            </f:switch>
+            <f:if condition="{data.subheader}"><h4 class="ce-subheader">{data.subheader}</h4></f:if>
+        </header>
+    </f:if>
+    <f:render section="Main" />
+</div>
+</html>
